@@ -15,15 +15,16 @@ class BookList extends Component {
     displayBooks(){
         var data = this.props.data;
         if(data.loading)
-            return (<div>Loading books...</div>)
+        return (<div>Loading books...</div>)
         else
             return data.books.map(book =>{
                 return(
                     <li>{book.name}</li>
-                )
-            })
-    }
+                    )
+                })
+            }
     render(){
+        console.log(this.props);
         return(
             <div>
                 <ul id="book-list">
